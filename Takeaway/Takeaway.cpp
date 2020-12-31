@@ -12,7 +12,7 @@ using namespace std;
 
 //base class
 class Item {
-	public:
+public:
 	//Attributes
 		string name;
 		int calories;
@@ -21,6 +21,7 @@ class Item {
 };
 
 class Appestiser : public Item {
+public:
 	// Consult menu.csv to identify appropriate data types for these attributes
 	char shareable;
 	char TwoForOne;
@@ -31,6 +32,7 @@ class MainCourse : public Item {
 };
 
 class Beverage : public Item {
+public:
 	// Consult menu.csv to identify appropriate data types for these attributes
 	int abv;
 	string volume;
@@ -46,11 +48,22 @@ class ItemList
 };
 
 class Menu : public ItemList {
+	void load() {
 
+	}
 };
 
 class Order : public ItemList {
+	string add() {
 
+	}
+	string remove() {
+
+	}
+	int calculateTotal() {
+		//what is eligible for a 2-4-1 discount 
+		//if (class Appestiser::TwoForOne == "y") {} - change this so it asks if specfic foods are 2-4-1 (sort menu out first)
+	}
 };
 
 
@@ -61,7 +74,7 @@ int main()
 
 	// Create a menu object from a CSV file
 	Menu menu = Menu("Takeaway/menu.csv");
-
+	
 	// Create an order object
 	Order order = Order();
 
