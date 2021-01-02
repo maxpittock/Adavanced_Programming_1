@@ -4,9 +4,11 @@
 #include "Order.h"
 #include "Item.h"
 
+#include <string>
 #include <iostream>
 #include <vector>
 #include <cstring>
+
 
 using namespace std;
 
@@ -72,7 +74,30 @@ int main()
 	string userCommand;
 	vector <string> parameters;
 
+	vector <pair<string, vector<int>>> read_csv(string filename) {
+		vector<pair<string, vector<int>>> result;
+
+	}
+
 	// Create a menu object from a CSV file
+	ifstream InFile;
+	
+	InFile.open("menu.csv");
+	if (InFile.is_open()) {
+		cout << "file has been opened" << endl;
+	}
+	else {
+		cout << "No file has been opened" << endl;
+	}
+
+	while (!InFile.eof()) {
+
+	}
+
+	// Menu class objects
+	Menu Food;
+	Menu 
+
 	Menu menu = Menu("Takeaway/menu.csv");
 	
 	// Create an order object
