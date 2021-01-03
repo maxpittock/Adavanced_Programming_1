@@ -141,6 +141,11 @@
   <ItemGroup>
     <ClCompile Include="Takeaway.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Order.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

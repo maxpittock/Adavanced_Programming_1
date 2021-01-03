@@ -1,11 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "Menu.h"
-#include "Order.h"
-#include "Item.h"
+//#include "Order.h"
+//#include "Item.h"
 
 #include <string>
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <cstring>
 
@@ -50,6 +51,8 @@ class ItemList
 };
 
 class Menu : public ItemList {
+public:
+	
 	void load() {
 
 	}
@@ -74,81 +77,69 @@ int main()
 	string userCommand;
 	vector <string> parameters;
 
-	vector <pair<string, vector<int>>> read_csv(string filename) {
-		vector<pair<string, vector<int>>> result;
 
-	}
+	ReadFile menu(int);
+
 
 	// Create a menu object from a CSV file
-	ifstream InFile;
-	
-	InFile.open("menu.csv");
-	if (InFile.is_open()) {
-		cout << "file has been opened" << endl;
-	}
-	else {
-		cout << "No file has been opened" << endl;
-	}
 
-	while (!InFile.eof()) {
-
-	}
 
 	// Menu class objects
-	Menu Food;
-	Menu 
+	//Menu Food;
+	//Menu
 
-	Menu menu = Menu("Takeaway/menu.csv");
-	
-	// Create an order object
-	Order order = Order();
 
-	while (userCommand != "exit")
-	{
-		getline(cin, userCommand);
-		char* cstr = new char[userCommand.length() + 1];
-		strcpy(cstr, userCommand.c_str());
 
-		char* token;
-		token = strtok(cstr, " ");
+		// Create an order object
+		/*Order order = Order();
 
-		while (token != NULL)
+		while (userCommand != "exit")
 		{
-			parameters.push_back(token);
-			token = strtok(NULL, " ");
+			getline(cin, userCommand);
+			char* cstr = new char[userCommand.length() + 1];
+			strcpy(cstr, userCommand.c_str());
+
+			char* token;
+			token = strtok(cstr, " ");
+
+			while (token != NULL)
+			{
+				parameters.push_back(token);
+				token = strtok(NULL, " ");
+			}
+
+			string command = parameters[0];
+
+			if (command.compare("menu") == 0) {
+				cout << menu.toString();
+			}
+			else if (command.compare("add") == 0)
+			{
+				Item* choice; // you need to instantiate this using the menu object!
+				order.add(choice);
+
+				// You may also wish to implement the ability to add multiple items at once!
+				// e.g. add 1 5 9
+			}
+			else if (command.compare("remove") == 0)
+			{
+
+			}
+			else if (command.compare("checkout") == 0)
+			{
+
+			}
+			else if (command.compare("help") == 0)
+			{
+
+			}
+
+			parameters.clear();
+
 		}
 
-		string command = parameters[0];
+		cout << "Press any key to quit...";
+		std::getchar();*/
 
-		if (command.compare("menu") == 0) {
-			cout << menu.toString();
-		}
-		else if (command.compare("add") == 0)
-		{
-			Item* choice; // you need to instantiate this using the menu object!
-			order.add(choice);
-
-			// You may also wish to implement the ability to add multiple items at once!
-			// e.g. add 1 5 9 
-		}
-		else if (command.compare("remove") == 0)
-		{
-
-		}
-		else if (command.compare("checkout") == 0)
-		{
-
-		}
-		else if (command.compare("help") == 0)
-		{
-
-		}
-
-		parameters.clear();
-
-	}
-
-	cout << "Press any key to quit...";
-	std::getchar();
-
+	;
 }
