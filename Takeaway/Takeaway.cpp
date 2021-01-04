@@ -11,15 +11,13 @@
 #include <cstring>
 
 
-using namespace std;
-
 //base class
 class Item {
 public:
 	//Attributes
-		string name;
+		std::string name;
 		int calories;
-		string price;
+		std::string price;
 
 };
 
@@ -38,7 +36,7 @@ class Beverage : public Item {
 public:
 	// Consult menu.csv to identify appropriate data types for these attributes
 	int abv;
-	string volume;
+	std::string volume;
 };
 
 // needs to be an abstract class ( a class that has atleast one pure virtual function)
@@ -59,10 +57,10 @@ public:
 };
 
 class Order : public ItemList {
-	string add() {
+	std::string add() {
 
 	}
-	string remove() {
+	std::string remove() {
 
 	}
 	int calculateTotal() {
@@ -71,16 +69,18 @@ class Order : public ItemList {
 	}
 };
 
+//int menu() {
+	
+//}
 
 int main()
 {
-	string userCommand;
-	vector <string> parameters;
-
-
-	ReadFile menu(int);
-
-
+	std::string userCommand;
+	std::vector <std::string> parameters;
+	
+	//calling menu function defined in menu.h
+	menu();
+	
 	// Create a menu object from a CSV file
 
 
