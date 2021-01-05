@@ -23,6 +23,9 @@ int menu()
 			// print line to console
 			std::cout << line << std::endl;
 		}
+
+
+
 		// once all the data is inputted to console close file.
 		MyFile.close();
 

@@ -56,6 +56,22 @@ public:
 	}
 };
 
+class StringType : public Menu {
+	std::string stringmethod(
+	
+	);
+};
+class IntType : public Menu {
+	int intmethod(
+	
+	);
+};
+class CharType : public Menu {
+	char charmethod(
+	
+	);
+};
+
 class Order : public ItemList {
 	std::string add() {
 
@@ -65,19 +81,24 @@ class Order : public ItemList {
 	}
 	int calculateTotal() {
 		//what is eligible for a 2-4-1 discount 
-		//if (class Appestiser::TwoForOne == "y") {} - change this so it asks if specfic foods are 2-4-1 (sort menu out first)
+		//if (class Appestiser::TwoForOne == "y") {} - change this so it asks if specfic foods are 2-4-1 - potentially while loop (sort menu out first)
 	}
 };
 
-//int menu() {
-	
-//}
 
 int main()
 {
 	std::string userCommand;
 	std::vector <std::string> parameters;
-	
+
+	std::vector<Menu*> Menudata;
+
+	Menudata.push_back(new StringType);
+	Menudata.push_back(new IntType);
+	Menudata.push_back(new CharType);
+
+
+
 	//calling menu function defined in menu.h
 	menu();
 	
