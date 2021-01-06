@@ -50,26 +50,30 @@ class ItemList
 
 class Menu : public ItemList {
 public:
-	
-	void load() {
-
+	// defining the menu fucntion parameters
+	Menu()
+	{
+		load();
 	}
 };
 
 class StringType : public Menu {
-	std::string stringmethod(
-	
-	);
+	std::string stringmethod()
+	{
+
+	}
 };
 class IntType : public Menu {
-	int intmethod(
-	
-	);
+	int intmethod()
+	{
+
+	}
 };
 class CharType : public Menu {
-	char charmethod(
-	
-	);
+	char charmethod()
+	{
+
+	}
 };
 
 class Order : public ItemList {
@@ -88,19 +92,24 @@ class Order : public ItemList {
 
 int main()
 {
+	load();
+	//Menu load(int);
+
 	std::string userCommand;
 	std::vector <std::string> parameters;
 
+
+
 	std::vector<Menu*> Menudata;
 
-	Menudata.push_back(new StringType);
+	/*Menudata.push_back(new StringType);
 	Menudata.push_back(new IntType);
-	Menudata.push_back(new CharType);
+	Menudata.push_back(new CharType);*/
 
 
 
 	//calling menu function defined in menu.h
-	menu();
+	
 	
 	// Create a menu object from a CSV file
 

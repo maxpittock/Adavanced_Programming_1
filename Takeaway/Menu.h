@@ -1,7 +1,7 @@
 #pragma once
 
-//function definition
-int menu();
+//load function declaration
+int load();
 	
 
 

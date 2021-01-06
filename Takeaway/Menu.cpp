@@ -7,8 +7,8 @@
 #include <cstring>
 
 
-// defining the menu fucntion parameters
-int menu()
+// defining the load fucntion parameters
+int load()
 {
 		//variable for file
 		std::ifstream MyFile;
@@ -23,11 +23,8 @@ int menu()
 			// print line to console
 			std::cout << line << std::endl;
 		}
-
-
-
 		// once all the data is inputted to console close file.
 		MyFile.close();
-
 		return 0;
 }
+
