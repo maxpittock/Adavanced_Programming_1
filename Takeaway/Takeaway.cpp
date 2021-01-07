@@ -55,24 +55,25 @@ public:
 	{
 		load();
 	}
+	virtual ~Menu()
+	{
+
+	}
 };
 
 class StringType : public Menu {
 	std::string stringmethod()
 	{
-
 	}
 };
 class IntType : public Menu {
 	int intmethod()
 	{
-
 	}
 };
 class CharType : public Menu {
 	char charmethod()
 	{
-
 	}
 };
 
@@ -92,15 +93,31 @@ class Order : public ItemList {
 
 int main()
 {
-	load();
-	//Menu load(int);
-
+	//load();
+	//Menu load(int); 
+	int count;
 	std::string userCommand;
 	std::vector <std::string> parameters;
-
-
-
+	//a vector of Menu pointers that can store pointers to the child types
 	std::vector<Menu*> Menudata;
+
+	Menudata.push_back(new StringType);
+	Menudata.push_back(new IntType);
+	Menudata.push_back(new CharType);
+
+	
+
+	Open_Menu = count;
+	for (int i = 0; i < count; i++)
+	{
+		Menudata.push_back(Open_Menu);
+	}
+
+	//Item Nachos;
+	//Item Buffalo_Wings;
+
+
+	
 
 	/*Menudata.push_back(new StringType);
 	Menudata.push_back(new IntType);
