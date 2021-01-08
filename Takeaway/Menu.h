@@ -6,6 +6,6 @@
 int load();
 
 extern std::string Open_Menu;
-
+extern std::string line;
 
 

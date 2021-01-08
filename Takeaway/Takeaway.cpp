@@ -16,9 +16,10 @@ class Item {
 public:
 	//Attributes
 		std::string name;
-		int calories;
 		std::string price;
-
+		int calories;
+		
+		//store instances of this class as a vector of poinrters
 };
 
 class Appestiser : public Item {
@@ -29,6 +30,7 @@ public:
 };
 
 class MainCourse : public Item {
+public:
 
 };
 
@@ -43,27 +45,33 @@ public:
 class ItemList
 {
 	// Provide and interface for storing and manipulating food and drink items
-	//store instances of this class as a vector of poinrters
+
 	// sole member function "tostring" should be the pure virtual function
 
 };
 
 class Menu : public ItemList {
 public:
-	// defining the menu fucntion parameters
+	// Creating menu constructor#
 	Menu()
 	{
+		std::cout << "Created menu!" << std::endl;
 		load();
 	}
+
+	
+
 	virtual ~Menu()
 	{
-
+		std::cout << "Destroyed menu!" << std::endl;
 	}
 };
 
 class StringType : public Menu {
 	std::string stringmethod()
 	{
+		
+
 	}
 };
 class IntType : public Menu {
@@ -99,19 +107,22 @@ int main()
 	std::string userCommand;
 	std::vector <std::string> parameters;
 	//a vector of Menu pointers that can store pointers to the child types
-	std::vector<Menu*> Menudata;
 
-	Menudata.push_back(new StringType);
-	Menudata.push_back(new IntType);
-	Menudata.push_back(new CharType);
+	std::vector<Item *> Menudata;
 
-	
+	Menu e;
+	//Create a vector of pointers to the file.... Something like shown below except instead of hard coding the values it reads from the file
+	Menudata.push_back(new Item("Nachos", "4.99", 600 ))
 
-	Open_Menu = count;
-	for (int i = 0; i < count; i++)
-	{
-		Menudata.push_back(Open_Menu);
-	}
+	//Menudata.push_back(new Appestiser);
+	//Menudata.push_back(new MainCourse);
+	//Menudata.push_back(new Beverage);
+
+
+
+	//Menudata[0]->
+
+
 
 	//Item Nachos;
 	//Item Buffalo_Wings;

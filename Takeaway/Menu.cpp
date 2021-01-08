@@ -21,8 +21,9 @@ int load()
 			std::string line;
 			//using CSV file so commas are used to divide individual information out of the file and store in line
 			std::getline(MyFile, line, ',');
+			//std::getline(MyFile, line, '\n');
 			// print line to console
-			//std::cout << line << std::endl;
+			std::cout << line << std::endl;
 		}
 		// once all the data is inputted to console close file.
 		MyFile.close();
