@@ -14,9 +14,11 @@
 //base class
 class Item {
 public:
-	Item(std::string, std::string, int)
+	Item(std::string a, std::string b , int c)
 	{
-
+		name = a;
+		price = b;
+		calories = c;
 	}
 	//Attributes
 		std::string name;
@@ -120,9 +122,10 @@ int main()
 	//Menu e;
 	//Create a vector of pointers to the file.... Something like shown below except instead of hard coding the values it reads from the file
 	Menudata.push_back(new Item("Nachos", "4.99", 4));
+	
 	std::cout << Menudata[0] << std::endl;
 
-	std::cout << "hello" << std::endl;
+	
 	//Menudata.push_back(new Appestiser);
 	//Menudata.push_back(new MainCourse);
 	//Menudata.push_back(new Beverage);
