@@ -7,7 +7,7 @@
 #include <cstring>
 
 
-// defining the load fucntion parameters
+// defining the load fucntion definition
 int load()
 {
 		//variable for file
@@ -24,6 +24,10 @@ int load()
 			//std::getline(MyFile, line, '\n');
 			// print line to console
 			std::cout << line << std::endl;
+		}
+		if (!MyFile.is_open())
+		{
+			std::cout << "File Failed to open" << std::endl;
 		}
 		// once all the data is inputted to console close file.
 		MyFile.close();

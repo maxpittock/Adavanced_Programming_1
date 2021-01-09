@@ -14,12 +14,19 @@
 //base class
 class Item {
 public:
+	Item(std::string, std::string, int)
+	{
+
+	}
 	//Attributes
 		std::string name;
 		std::string price;
 		int calories;
-		
-		//store instances of this class as a vector of poinrters
+	//store instances of this class as a vector of poinrters
+	~Item()
+	{
+
+	}
 };
 
 class Appestiser : public Item {
@@ -103,17 +110,19 @@ int main()
 {
 	//load();
 	//Menu load(int); 
-	int count;
+	int count = 0;
 	std::string userCommand;
 	std::vector <std::string> parameters;
 	//a vector of Menu pointers that can store pointers to the child types
 
-	std::vector<Item *> Menudata;
-
-	Menu e;
+	std::vector<Item*> Menudata;
+	
+	//Menu e;
 	//Create a vector of pointers to the file.... Something like shown below except instead of hard coding the values it reads from the file
-	Menudata.push_back(new Item("Nachos", "4.99", 600 ))
+	Menudata.push_back(new Item("Nachos", "4.99", 4));
+	std::cout << Menudata[0] << std::endl;
 
+	std::cout << "hello" << std::endl;
 	//Menudata.push_back(new Appestiser);
 	//Menudata.push_back(new MainCourse);
 	//Menudata.push_back(new Beverage);
