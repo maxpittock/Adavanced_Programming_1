@@ -14,11 +14,11 @@
 //base class
 class Item {
 public:
-	Item(std::string a, std::string b , int c)
+	Item(/*std::string a, std::string b , int c*/)
 	{
-		name = a;
-		price = b;
-		calories = c;
+		//name = a;
+		//price = b;
+		//calories = c;
 	}
 	//Attributes
 		std::string name;
@@ -53,8 +53,24 @@ public:
 // needs to be an abstract class ( a class that has atleast one pure virtual function)
 class ItemList
 {
+public:
+	std::vector<Item*> Menudata;
+	
 	// Provide and interface for storing and manipulating food and drink items
+	virtual std::string ToString()
+	{
+		
+		//for (size of vector.... if not at end then increment)
+		{
+			Menudata.push_back(new Item());
 
+			Menudata[1]->name;
+			Menudata[1]->price;
+			Menudata[1]->calories;
+
+			std::cout << Menudata[1] << std::endl;
+		}
+	}
 	// sole member function "tostring" should be the pure virtual function
 
 };
@@ -67,30 +83,15 @@ public:
 		std::cout << "Created menu!" << std::endl;
 		load();
 	}
+	std::string ToString()
+	{
 
+	}
 	
 
-	virtual ~Menu()
+	~Menu()
 	{
 		std::cout << "Destroyed menu!" << std::endl;
-	}
-};
-
-class StringType : public Menu {
-	std::string stringmethod()
-	{
-		
-
-	}
-};
-class IntType : public Menu {
-	int intmethod()
-	{
-	}
-};
-class CharType : public Menu {
-	char charmethod()
-	{
 	}
 };
 
@@ -117,30 +118,22 @@ int main()
 	std::vector <std::string> parameters;
 	//a vector of Menu pointers that can store pointers to the child types
 
-	std::vector<Item*> Menudata;
-	
 	//Menu e;
 	//Create a vector of pointers to the file.... Something like shown below except instead of hard coding the values it reads from the file
-	Menudata.push_back(new Item("Nachos", "4.99", 4));
 	
-	std::cout << Menudata[0] << std::endl;
 
 	
+	//need item_list object 
+	std::cout << "yo" << std::endl;
+	ItemList e;
 	//Menudata.push_back(new Appestiser);
 	//Menudata.push_back(new MainCourse);
 	//Menudata.push_back(new Beverage);
 
-
-
-	//Menudata[0]->
-
-
+	 //Menudata[0]->
 
 	//Item Nachos;
 	//Item Buffalo_Wings;
-
-
-	
 
 	/*Menudata.push_back(new StringType);
 	Menudata.push_back(new IntType);
