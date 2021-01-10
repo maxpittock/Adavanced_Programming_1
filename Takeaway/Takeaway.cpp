@@ -60,13 +60,13 @@ public:
 	virtual std::string ToString()
 	{
 		
-		//for (size of vector.... if not at end then increment)
+		//for (int i = 0; i <= vector size; i++....)
 		{
 			Menudata.push_back(new Item());
-
-			Menudata[1]->name;
-			Menudata[1]->price;
-			Menudata[1]->calories;
+			//point the variables to the objects from file.
+			Menudata[i]->name;
+			Menudata[i]->price;
+			Menudata[i]->calories;
 
 			std::cout << Menudata[1] << std::endl;
 		}
