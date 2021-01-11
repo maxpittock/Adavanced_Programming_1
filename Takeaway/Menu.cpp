@@ -1,4 +1,6 @@
 #include "Menu.h"
+#include "Order.h"
+#include "Item.h"
 
 #include <string>
 #include <iostream>
@@ -6,9 +8,46 @@
 #include <vector>
 #include <cstring>
 
+
 // defining the load fucntion definition
-int load()
-{
+using namespace Mhed;
+using namespace Ihed;
+
+
+class Menu : public Mhed::ItemList {
+public:
+	// Creating menu constructor
+	Menu()
+	{
+		std::cout << "Created menu!" << std::endl;
+		load();
+	}
+	std::vector<Item*> Menudata;
+	std::string ToString()
+	{
+		std::string test = "";
+		for (int i = 0; i <= Menudata.size(); i++)
+		{
+
+			//Appestiser* n = new Appestiser;
+			//n->type = 
+
+			//Menudata.push_back(new Item());
+
+			//point the variables to the objects from file.
+
+			std::cout << Menudata[0] << std::endl;
+			Menudata[i]->name;
+			Menudata[i]->price;
+			Menudata[i]->calories;
+
+
+			std::cout << Menudata[1] << std::endl;
+		}
+		return test;
+	}
+	int load()
+	{
 		//variable for file
 		std::ifstream MyFile;
 		std::string Open_Menu = ("menu.csv");
@@ -20,10 +59,11 @@ int load()
 			std::string line;
 			//using CSV file so commas are used to divide individual information out of the file and store in line
 			std::getline(MyFile, line, ',');
-			
+
 			//std::getline(MyFile, line, '\n');
 			// print line to console
-			//std::cout << line << std::endl;
+			std::cout << line << std::endl;
+
 		}
 		if (!MyFile.is_open())
 		{
@@ -32,5 +72,11 @@ int load()
 		// once all the data is inputted to console close file.
 		MyFile.close();
 		return 0;
-}
+	}
+
+	~Menu()
+	{
+		std::cout << "Destroyed menu!" << std::endl;
+	}
+};
 

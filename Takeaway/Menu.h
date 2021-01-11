@@ -3,5 +3,16 @@
 #include <iostream>
 
 //load function declaration
-int load();
 
+namespace Mhed {
+	class ItemList {
+
+	};
+	class Menu : public ItemList {
+		Menu();
+		int load();
+		~Menu();
+
+
+	};
+}

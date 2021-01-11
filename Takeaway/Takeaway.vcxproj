@@ -139,7 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Order.cpp" />
     <ClCompile Include="Takeaway.cpp" />
   </ItemGroup>
   <ItemGroup>
