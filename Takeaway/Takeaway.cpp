@@ -24,6 +24,7 @@ public:
 		std::string name;
 		std::string price;
 		int calories;
+		char type;
 	//store instances of this class as a vector of poinrters
 	~Item()
 	{
@@ -54,39 +55,46 @@ public:
 class ItemList
 {
 public:
-	std::vector<Item*> Menudata;
 	
 	// Provide and interface for storing and manipulating food and drink items
-	virtual std::string ToString()
-	{
-		
-		//for (int i = 0; i <= vector size; i++....)
-		{
-			Menudata.push_back(new Item());
-			//point the variables to the objects from file.
-			Menudata[i]->name;
-			Menudata[i]->price;
-			Menudata[i]->calories;
-
-			std::cout << Menudata[1] << std::endl;
-		}
-	}
+	virtual std::string ToString() = 0;
 	// sole member function "tostring" should be the pure virtual function
 
 };
 
 class Menu : public ItemList {
 public:
-	// Creating menu constructor#
+	// Creating menu constructor
 	Menu()
 	{
 		std::cout << "Created menu!" << std::endl;
 		load();
 	}
+	std::vector<Item*> Menudata;
 	std::string ToString()
 	{
+		std::string test = "";
+		for (int i = 0; i <= Menudata.size(); i++)
+		{
 
+			//Appestiser* n = new Appestiser;
+			//n->type = 
+			
+			Menudata.push_back(new Item());
+			
+			//point the variables to the objects from file.
+			
+			std::cout << Menudata[0] << std::endl;
+			Menudata[i]->name;
+			Menudata[i]->price;
+			Menudata[i]->calories;
+			
+
+			std::cout << Menudata[1] << std::endl;
+		}
+		return test;
 	}
+	
 	
 
 	~Menu()
@@ -116,16 +124,17 @@ int main()
 	int count = 0;
 	std::string userCommand;
 	std::vector <std::string> parameters;
+	
 	//a vector of Menu pointers that can store pointers to the child types
-
+	
 	//Menu e;
 	//Create a vector of pointers to the file.... Something like shown below except instead of hard coding the values it reads from the file
 	
 
 	
 	//need item_list object 
-	std::cout << "yo" << std::endl;
-	ItemList e;
+	//std::cout << "yo" << std::endl;
+	//ItemList e;
 	//Menudata.push_back(new Appestiser);
 	//Menudata.push_back(new MainCourse);
 	//Menudata.push_back(new Beverage);
@@ -139,14 +148,8 @@ int main()
 	Menudata.push_back(new IntType);
 	Menudata.push_back(new CharType);*/
 
-
-
 	//calling menu function defined in menu.h
-	
-	
 	// Create a menu object from a CSV file
-
-
 	// Menu class objects
 	//Menu Food;
 	//Menu
