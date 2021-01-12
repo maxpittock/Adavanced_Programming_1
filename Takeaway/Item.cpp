@@ -4,33 +4,15 @@
 
 #include <string>
 #include <iostream>
-using namespace Ihed;
 
-class Item {
-	Item(/*std::string a, std::string b , int c*/)
+Item::Item(/*std::string a, std::string b , int c*/)
 	{
-
+	//name = a;
+	//price = b;
+	//calories = c;
 	}
-public:
-	std::string name;
-	std::string price;
-	int calories;
-	char type;
-	~Item() {
 
-	}
-};
+Item::~Item()
+{
 
-class Appestiser : public Ihed::Item {
-public:
-	// Consult menu.csv to identify appropriate data types for these attributes
-
-};
-class MainCourse : public Ihed::Item {
-public:
-
-};class Beverage : public Ihed::Item {
-public:
-	// Consult menu.csv to identify appropriate data types for these attributes
-
-};
+}

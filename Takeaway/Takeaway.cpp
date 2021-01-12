@@ -10,9 +10,7 @@
 #include <vector>
 #include <cstring>
 
-
 //base class
-
 int main()
 {
 	//load();
@@ -23,12 +21,7 @@ int main()
 	
 	//a vector of Menu pointers that can store pointers to the child types
 	
-
-	
- 
 	//Create a vector of pointers to the file.... Something like shown below except instead of hard coding the values it reads from the file
-	
-
 	
 	//need item_list object 
 	//std::cout << "yo" << std::endl;

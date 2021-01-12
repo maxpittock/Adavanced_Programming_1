@@ -1,13 +1,7 @@
-#include <iostream>;
-#include <string>;
 #pragma once
 
 
-
-namespace Ohed {
-
-
-	class Order : public Mhed::ItemList {
+class Order : public Menu::ItemList {
 		std::string add();
 		std::string remove();
 		int calculateTotal();
@@ -15,5 +9,3 @@ namespace Ohed {
 		//if (class Appestiser::TwoForOne == "y") {} - change this so it asks if specfic foods are 2-4-1 - potentially while loop (sort menu out first)
 
 	};
-
-}
