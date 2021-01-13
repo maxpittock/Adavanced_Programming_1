@@ -17,40 +17,51 @@ Menu::Menu() {
 	std::cout << "Creating Menu!" << std::endl;
 	load();
 	}
-Menu::~Menu() {
-		std::cout << "Destroyed menu!" << std::endl;
-}
+
 
 std::vector<Item*> Menudata;
-
-std::string ItemList::ToString() 
-	{
+std::string Menu::ToString() 
+	{	
 	std::string test;
-		for (auto i = 0; i <= Menudata.size(); i++)
+		for (int i = 0; i <= Menudata.size(); i++)
 		{
-			//Creates object of item
+			//Stores an unamed object of Item class
 			Menudata.push_back(new Item());
-			//creates object of appestiser
-			Appestiser* n = new Appestiser();
-			//I = type
-			Menudata[i]->type;
-			//n = type
 			
-			n->type;
+		
+			
+			Item temp;
+			//Object pointer to appestiser
+			Appestiser* n;
+
+			
+			//Appestiser& n;
+			
+			
+			Menudata[i]->type;
+			(*n)->type;
+			Menudata.push_back(n);
+
+
+			Menudata[i]->name;
+			(*n)->name >> test;
+			 
+			Menudata[i]->price;
+			(*n)->price;
+
+			Menudata[i]->calories;
+			(*n)->calories;
+
+			//n->type;
 
 			//use getline to get data from the file and put it into n.
 			// n is an object of appestiser
-			// menudata[i]-> is basically saying - wherever ther i is (in the for loop) that is the type 
+			// menudata[i]->type is basically saying - wherever the i is (in the for loop) that is the type 
 			// then n -> type is saying the "type" location now = n which if n had a value (from getline) it would give the vector the data
 			//variables "line" may need to be changed - was orgianlly in "load()" now in menu.h 
-	
-			Menudata[i]->price;
-			Menudata[i]->calories;
 
+			//Menudata.push_back(n);
 			
-
-			Menudata.push_back(n);
-			std:
 			//n->type = 
 			
 			
@@ -64,35 +75,28 @@ std::string ItemList::ToString()
 		return test;
 	}
 
-	
 int Menu::load()
+{
+	
+	//Find the correct file location and store the information in the variable
+	MyFile.open(Open_Menu);
+	//while the file is executing properly
+	while (MyFile.good()) 
 	{
-
-		
-		//Find the correct file location and store the information in the variable
-		MyFile.open(Open_Menu);
-		//while the file is executing properly
-		while (MyFile.good()) {
-
-			//create a line variable to store data
-			
-			//using CSV file so commas are used to divide individual information out of the file and store in line
-			std::getline(MyFile, line, ',');
-			
-			//std::getline(MyFile, line, '\n');
-			// print line to console
-			std::cout << line << std::endl;
-
-		}
-		if (!MyFile.is_open())
-		{
-			std::cout << "File Failed to open" << std::endl;
-		}
-		// once all the data is inputted to console close file.
-		MyFile.close();
-		return 0;
+		//using CSV file so commas are used to divide individual information out of the file and store in line
+		std::getline(MyFile, line, ',');
+		//std::getline(MyFile, line, '\n');
+		// print line to console	
 	}
+	if (!MyFile.is_open())
+	{
+		std::cout << "File Failed to open" << std::endl;
+	}
+	// once all the data is inputted to console close file.
+	MyFile.close();
+	return 0;
+}
 
-
-
-
+Menu::~Menu() {
+	std::cout << "destroyed menu!" << std::endl;
+}

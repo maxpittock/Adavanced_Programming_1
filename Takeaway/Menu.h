@@ -17,12 +17,15 @@ extern std::vector<Item*> Menudata;
 
 class Menu : public ItemList {
 public:
-	std::string line;
-	std::ifstream MyFile;
-	//variable for file
-	std::string Open_Menu = ("menu.csv");
 	// Creating menu constructor
 	Menu();
+	std::ifstream MyFile;
+	std::string line;
+	//create a line variable to store data
+	std::string ToString();
+	//variable for file
+	std::string Open_Menu = ("menu.csv");
+	
 	int load();
 	~Menu();
 	
