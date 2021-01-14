@@ -18,7 +18,7 @@ int main()
 	int count = 0;
 	std::string userCommand;
 	std::vector <std::string> parameters;
-	
+	Menu e;
 	//a vector of Menu pointers that can store pointers to the child types
 	
 	//Create a vector of pointers to the file.... Something like shown below except instead of hard coding the values it reads from the file

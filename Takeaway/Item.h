@@ -4,11 +4,12 @@
 
 class Item {
 public:
-		Item(/*std::string a std::string b , int c*/);
+	Item(/*char* t, char* y std::string& n, std::string p, int c*/);
+		char type;
 		std::string name;
 		std::string price;
 		int calories;
-		char type;
+		
 		~Item();
 	};
 

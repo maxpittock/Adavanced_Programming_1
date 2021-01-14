@@ -5,10 +5,11 @@
 #include <string>
 #include <iostream>
 
-Item::Item(/*std::string a, std::string b , int c*/)
+Item::Item(/*char& t, std::string& n, std::string p, int c*/ )
 	{
-	//name = a;
-	//price = b;
+	//type = t;
+	//name = n;
+	//price = p;
 	//calories = c;
 	}
 
